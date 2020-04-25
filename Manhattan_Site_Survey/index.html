@@ -40,8 +40,9 @@
         var view = new MapView({
         container: "viewDiv",
         map: map,
-        center: [-73.993497,40.751625], // longitude, latitude
-        zoom: 12,
+        center: [-73.976069,40.771501], // longitude, latitude
+        zoom: 12
+          ,
         padding: {right: 0}
         });
 
@@ -69,18 +70,12 @@
       view: view,
       //specify info for legend
       layerInfos: [{ 
-        layer: MapPluto_2020, 
+      layer: MapPluto_2020, 
         title: "Legend"
         }]
       });
     //adds widget to bottom right corner of view
-    view.ui.add(legend, "bottom-right");
-
-    //creaters editor widget   
-//    var editor = new Editor({
-//      view: view,
-//    });
-      // Loop through webmap layers and set an EditConfig for each
+    view.ui.add(legend, "bottom-left");
  
  view.map.layers.forEach(function(layer) {
   if (layer.title === "MN Retail") {
@@ -133,16 +128,17 @@ let editor = new Editor({
  //     deleteEnabled: false // default is true, set to false to disable the ability to delete features
  //     }]
 //});
-
+    
+view.when(function() {
 var print = new Print({
   view: view,
-//  printServiceUrl: "https://www.example.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task"
+  printServiceUrl: "https://utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task"
 });
 // Adds widget below other elements in the top left corner of the view
    view.ui.add(print, {
   position: "top-left"
 });
-    
+});    
 });
   </script>
 </head>
