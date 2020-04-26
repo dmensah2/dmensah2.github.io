@@ -37,31 +37,30 @@
         basemap: "topo"
       });
 
-        var view = new MapView({
-        container: "viewDiv",
-        map: map,
-        center: [-73.955844,40.795503], // longitude, latitude
-        zoom: 12
-          ,
-        padding: {right: 0}
-        });
+      var view = new MapView({
+      container: "viewDiv",
+      map: map,
+      center: [-73.955844,40.795503], // longitude, latitude
+      zoom: 12,
+      padding: {right: 0}
+      });
 
-        var compassWidget = new Compass({
-        view: view
+      var compassWidget = new Compass({
+      view: view
       });
       // Add the Compass widget to the top left corner of the view
       view.ui.add(compassWidget, "top-left");
     
-    // adds Manhattan retail location to map
-    var MN_Retail = new FeatureLayer({
+      // adds Manhattan retail location to map
+      var MN_Retail = new FeatureLayer({
       // URL to the service
-        url: "https://services1.arcgis.com/3yPqaPHdDzXwd0QH/arcgis/rest/services/MN_Retail/FeatureServer/0"
-    });
-    map.add(MN_Retail,0);
+      url: "https://services1.arcgis.com/3yPqaPHdDzXwd0QH/arcgis/rest/services/MN_Retail/FeatureServer/0"
+      });
+      map.add(MN_Retail,0);
     
       //adds Map Pluto layer to map
       var MapPluto_2020 = new FeatureLayer({
-        url: "https://services1.arcgis.com/3yPqaPHdDzXwd0QH/arcgis/rest/services/MapPluto_2020/FeatureServer/0"
+      url: "https://services1.arcgis.com/3yPqaPHdDzXwd0QH/arcgis/rest/services/MapPluto_2020/FeatureServer/0"
       });
       map.add(MapPluto_2020,0);
 
@@ -70,72 +69,71 @@
       view: view,
       //specify info for legend
       layerInfos: [{ 
-      layer: MapPluto_2020, 
+        layer: MapPluto_2020, 
         title: "Legend"
         }]
       });
-    //adds widget to bottom right corner of view
-    view.ui.add(legend, "bottom-left");
+      //adds widget to bottom right corner of view
+      view.ui.add(legend, "bottom-left");
  
- view.map.layers.forEach(function(layer) {
-  if (layer.title === "MN Retail") {
-    editConfigBusinessLayer = {
-      layer: layer,
-      // Set it so that only one field displays within the form
-      fieldConfig: [
-        {
-          name: "businessName",
-          label: "Business Name"
-        },
-        {
-          name: "businessCategory",
-          label: "Business Category"
-        },
-         {
-          name: "last_edited_date",
-          label: "Date Modified",
-        },
-        {
-          name: "streetNumber",
-          label: "Street Number"
-        },
-        {
-          name: "streetName",
-          label: "Street Name"
-        },
-        {
-          name: "completeAddress",
-          label: "Full Address"
-        }
-      ]
-    };
-  }
+  view.map.layers.forEach(function(layer) {
+    if (layer.title === "MN Retail") {
+      editConfigBusinessLayer = {
+        layer: layer,
+        // Set it so that only one field displays within the form
+        fieldConfig: [
+          {
+            name: "businessName",
+            label: "Business Name"
+          },
+          {
+            name: "businessCategory",
+            label: "Business Category"
+          },
+          {
+            name: "last_edited_date",
+            label: "Date Modified",
+          },
+          {
+            name: "streetNumber",
+            label: "Street Number"
+          },
+          {
+            name: "streetName",
+            label: "Street Name"
+          },
+          {
+            name: "completeAddress",
+            label: "Full Address"
+          }
+        ]
+      };
+    }
  });
 
 // Create the Editor
-let editor = new Editor({
+  let editor = new Editor({
     view: view,
     // Pass in the configurations created above
     layerInfos: [editConfigBusinessLayer]
    // Override the default template behavior of the Editor widget 
- });
-
+    });
   //adds editor widget to top right of map
     view.ui.add(editor, "top-right");
     
-//      addEnabled: false, // default is true, set to false to disable the ability to add a new feature
- //     updateEnabled: false // default is true, set to false to disable the ability to edit an existing feature
- //     deleteEnabled: false // default is true, set to false to disable the ability to delete features
- //     }]
-//});
+/*    addEnabled: false, // default is true, set to false to disable the ability to add a new feature
+    updateEnabled: false // default is true, set to false to disable the ability to edit an existing feature
+      deleteEnabled: false // default is true, set to false to disable the ability to delete features
+      }]
+}); */
     
-view.when(function() {
-var print = new Print({
-  view: view,
-  printServiceUrl: "https://utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task"
-});
-// Adds widget below other elements in the top left corner of the view
-   view.ui.add(print, {
+  view.when(function() {
+  var print = new Print({
+    view: view,
+    printServiceUrl: "https://utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task"
+  });
+  // Adds widget below other elements in the top left corner of the view
+  view.ui.add(print, {
   position: "top-left"
 });
 });    
