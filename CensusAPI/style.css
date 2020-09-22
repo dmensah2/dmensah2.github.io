@@ -1,0 +1,40 @@
+div {
+ width: 350px;
+ padding: 12.5px;
+ border: 2px solid gray;
+ margin: 0;
+ background-color:#cadaeb; 
+}
+
+h2 {
+  padding-left: 10px;
+  color: #348feb;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p {
+  text-align: left;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+input[type=text], select {
+  width: 75%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  font: Georgia, serif;
+}
+
+button[type=button] {
+  background-color: #348feb;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font: Georgia, serif;
+}
