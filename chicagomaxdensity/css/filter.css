@@ -1,0 +1,113 @@
+@charset "UTF-8";
+/* Complete */
+
+  
+  @font-face {
+    font-family: "CircularXXWeb-Regular";
+    src: url("CircularXXWeb-Regular.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: "CircularXXWeb-Bold";
+    src: url("CircularXXWeb-Bold.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "CircularXXWeb-Bold";
+    src: url("CircularXXWeb-Bold.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: "CircularXXWeb-Black";
+    src: url("CircularXXWeb-Black.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "CircularXXWeb-Black";
+    src: url("CircularXXWeb-Black.woff") format("woff");
+  }
+  
+  
+  /* subset */
+  
+  @font-face {
+    font-family: "CircularXXSub-RegularSubset";
+    src: url("CircularXXSub-RegularSubset.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: "CircularXXSub-RegularSubset";
+    src: url("CircularXXSub-RegularSubset.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "CircularXXSub-BoldSubset";
+    src: url("CircularXXSub-BoldSubset.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: "CircularXXSub-BoldSubset";
+    src: url("CircularXXSub-BoldSubset.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "CircularXXSub-BlackSubset";
+    src: url("CircularXXSub-BlackSubset.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: "CircularXXSub-BlackSubset";
+    src: url("CircularXXSub-BlackSubset.woff2") format("woff2");
+  }
+
+/*custom for menus:*/
+#menu {
+  vertical-align: top;
+  display: inline-block;
+  width: 12%;
+}
+
+.filterselect{
+  
+    font: 12px/1.5 "CircularXXSub-BlackSubset";
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+
+.filterselect input, .filterselect select {
+    font: 16px/1.5 "CircularXXWeb-Regular";
+    display: block;
+    width: 100%;
+}
+.filterselect p{
+  
+    font: 12px/1.5 "CircularXXSub-RegularSubset";
+    margin-top: 0px !important;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+}
+
+.filterlabel {
+    font: 16px/1.5 "CircularXXSub-BlackSubset";
+    /*width: 50%;
+    float: right;*/
+    margin-right: 10px;
+    padding: 0px;
+    border: 0px;
+    /*clear: left;*/
+}
+.filterlabel + .filterlabel {
+    clear: none;
+    text-align: right;
+    color: #999;
+}
+.slider {
+  font: 12px/1.5 "CircularXXSub-BlackSubset";
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}

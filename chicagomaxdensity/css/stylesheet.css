@@ -1,0 +1,75 @@
+/*
+ *
+ * INSTRUCTIONS
+ *
+ * Copy the Legal Disclaimer and the @font-faces statements to your regular CSS file.
+ * The font file(s) should be placed relative to the regular CSS file.
+ *
+ */
+
+/* Complete */
+
+@font-face {
+  font-family: "CircularXXWeb-Regular";
+  src: url("CircularXXWeb-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "CircularXXWeb-Regular";
+  src: url("CircularXXWeb-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "CircularXXWeb-Bold";
+  src: url("CircularXXWeb-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "CircularXXWeb-Bold";
+  src: url("CircularXXWeb-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "CircularXXWeb-Black";
+  src: url("CircularXXWeb-Black.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "CircularXXWeb-Black";
+  src: url("CircularXXWeb-Black.woff") format("woff");
+}
+
+
+/* subset */
+
+@font-face {
+  font-family: "CircularXXSub-RegularSubset";
+  src: url("CircularXXSub-RegularSubset.woff") format("woff");
+}
+
+@font-face {
+  font-family: "CircularXXSub-RegularSubset";
+  src: url("CircularXXSub-RegularSubset.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "CircularXXSub-BoldSubset";
+  src: url("CircularXXSub-BoldSubset.woff") format("woff");
+}
+
+@font-face {
+  font-family: "CircularXXSub-BoldSubset";
+  src: url("CircularXXSub-BoldSubset.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "CircularXXSub-BlackSubset";
+  src: url("CircularXXSub-BlackSubset.woff") format("woff");
+}
+
+@font-face {
+  font-family: "CircularXXSub-BlackSubset";
+  src: url("CircularXXSub-BlackSubset.woff2") format("woff2");
+}
+
+
