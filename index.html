@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<!---My first Census Data Download website-->
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Census Data Download API</title>
+    <script src="downloadcsv.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h2>Census API Download</h2>
+    <div>
+        <section id="form">
+            <p>This site provides a light-weight, user-friendly interface integrated with the Census API to download data in smaller snippets the the U.S. Census Bureau.</p>
+            <form>
+                <h3>Enter your information:</h3>   
+                <p>Variable:</p>
+                <form>
+                    <select name = "variable" id="variable">
+                        <option value="S0101_C01_001E">Total Population</option>
+                        <option value="S0101_C03_001E">Male Population</option>
+                        <option value="S0101_C05_001E">Female Population</option>
+                        <option value="S0102_C01_006E">White Population</option>
+                        <option value="S0102_C01_007E">Black Population</option>
+                        <option value="S0102_C01_009E">Asian Population</option>
+                        <option value="S0102_C01_008E">American Indian & Alaska Native Population</option>
+                        <option value="S0102_C01_010E">Native Hawaiian & Other Pacific Islander Population</option>
+                    </select>
+                </form>
+                <br>
+                <p>Geography:</p>
+                <form>
+                    <select name = "geography" id="geography">
+                        <option value="state">State</option>
+                        <option value="zip code tabulation area">Zip Code Tabulation Area</option>
+                        <option value="urban area">Urban Area</option>
+                        <option value="county">County</option>
+                        <option value="place">Place</option>
+                        <option value="region">Region</option>
+                        <option value="combined statistical area">Combined Statistical Area</option>
+                        <option value="division">Division</option>
+                    </select>
+                </form>
+                <br>
+                <br>
+                <button type="button" onclick ="download_csv();">Download CSV</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
